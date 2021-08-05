@@ -63,35 +63,51 @@
 
 // console.log("finish");
 
-console.log("start");
+// console.log("start");
 
-function loginUser(email, password, callback) {
-  setTimeout(() => {
-    console.log("now we have the data");
-    callback({ userEmail: email });
-  }, 3000);
-}
+// function loginUser(email, password, callback) {
+//   setTimeout(() => {
+//     console.log("now we have the data");
+//     callback({ userEmail: email });
+//   }, 3000);
+// }
 
-function getUserVideos(email, callback) {
-  setTimeout(() => {
-    callback(["video1", "video2", "video3"]);
-  }, 2000);
-}
+// function getUserVideos(email, callback) {
+//   setTimeout(() => {
+//     callback(["video1", "video2", "video3"]);
+//   }, 2000);
+// }
 
-function videoDetails(video, callback) {
-  setTimeout(() => {
-    callback("title of the video");
-  }, 2000);
-}
+// function videoDetails(video, callback) {
+//   setTimeout(() => {
+//     callback("title of the video");
+//   }, 2000);
+// }
 
-const user = loginUser("jkang@gmail.com", 123456, (user) => {
-  console.log(user);
-  getUserVideos(user.userEmail, (videos) => {
-    console.log(videos);
-    videoDetails(videos[0], (title) => {
-      console.log(title);
-    });
-  });
-});
+// const user = loginUser("jkang@gmail.com", 123456, (user) => {
+//   console.log(user);
+//   getUserVideos(user.userEmail, (videos) => {
+//     console.log(videos);
+//     videoDetails(videos[0],  (title) => {
+//       console.log(title);
+//     });
+//   });
+// });
 
-console.log("finish");
+// console.log("finish");
+
+// const yt = new Promise((resolve) => {
+//   setTimeout(() => {
+//     console.log("getting stuff from youtube");
+//     resolve({ videos: [1, 2, 3, 4, 5] });
+//   }, 2000);
+// });
+
+// const fb = new Promise((resolve) => {
+//   setTimeout(() => {
+//     console.log("getting stuff from fb");
+//     resolve({ user: "name " });
+//   }, 5000);
+// });
+
+// Promise.all([yt, fb]).then((result) => console.log(result));
