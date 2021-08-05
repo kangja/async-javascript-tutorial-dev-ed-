@@ -145,10 +145,14 @@ function videoDetails(video) {
 //   .then((detail) => console.log(detail));
 
 async function displayUser() {
-  const loggedUser = await loginUser("jason", 123456);
-  const videos = await getUserVideos(loggedUser.userEmail);
-  const detail = await videoDetails(videos[0]);
-  console.log(detail);
+  try {
+    const loggedUser = await loginUser("jason", 123456);
+    const videos = await getUserVideos(loggedUser.userEmail);
+    const detail = await videoDetails(videos[0]);
+    console.log(detail);
+  } catch (err) {
+    console.log("we could not get the videos");
+  }
 }
 
 displayUser();
